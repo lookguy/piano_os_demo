@@ -10,10 +10,9 @@
         }
     }
     .booth {
-        min-height: 200px;
         text-align: center;
         background: #f5f5f5;
-        padding: 80px 0;
+        padding: 7rem 0 11rem 0;
         .title {
             color: #b47f42;
             position: relative;
@@ -44,15 +43,45 @@
                 width: 400px;
                 height: 175px;
                 margin: 0 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .quick_item_title {
+                    padding: 0 20px;
+                    text-align: left;
+                    h3 {
+                        font-size: 2rem;
+                    }
+                }
                 &:hover {
                     background: #b47f42;
                     color: white;
+                    h3 {
+                        color: white;
+                    }
                 }
             }
         }
         .booth_img_big {
             width: 100%;
             object-fit: cover;
+        }
+        .infomation_warp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .card_infomation {
+                width: 41rem;
+                margin: 1.1rem;
+                .card_img_wrap {
+                    height: 24rem;
+                    overflow: hidden;
+                    > img {
+                        width: 100%;
+                        object-fit: fill;
+                    }
+                }
+            }
         }
         &.clearPadding {
             padding: 0;
@@ -62,6 +91,39 @@
         background: url("./static/background/footer_bg.png") no-repeat 100%;
         .gq_footer {
             color: #fff;
+        }
+    }
+    .gq_width {
+        width: 1000px;
+        @media (min-width: 1600px) {
+            width: 1200px;
+        }
+    }
+    .active_banner {
+        .main_banner {
+            width: 100%;
+            max-height: 38rem;
+            overflow: hidden;
+            .card_img_wrap {
+                width: 100%;
+                object-fit: fill;
+            }
+        }
+        .rest_banners {
+            width: 100%;
+            display: flex;
+            margin-top: 20px;
+            align-items: center;
+            justify-content: space-between;
+            .rest_banner {
+                width: 27rem;
+                height: 27rem;
+                overflow: hidden;
+                .card_img_wrap {
+                    width: 100%;
+                    object-fit: fill;
+                }
+            }
         }
     }
 }
